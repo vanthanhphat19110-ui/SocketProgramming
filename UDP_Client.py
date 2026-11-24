@@ -7,8 +7,8 @@ print("Type 'bye' to quit.")
 
 while True:
     message = input("Client: ")
-    if (message == "bye"):
-        break
+    if (message == "bye"): break # client left the chat.
+
     client.sendto(message.encode(), SERVER) # sockets carry bytes, not text --> encode before sending, decode after receiving.
     try:
         data, _ = client.recvfrom(1024) # client tries to receive data from server.
