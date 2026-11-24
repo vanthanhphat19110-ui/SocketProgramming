@@ -3,6 +3,7 @@ from socket import *
 SERVER = ("127.0.0.1", 5000) # (HOST, PORT)
 client = socket(AF_INET, SOCK_DGRAM) # SOCK_DGRAM --> UDP.
 client.settimeout(3) # UDP may lose data.
+print("Type 'bye' to quit.")
 
 while True:
     message = input("Client: ")
