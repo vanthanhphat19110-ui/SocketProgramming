@@ -1,7 +1,7 @@
 from socket import *
 
 server = socket(AF_INET, SOCK_DGRAM) # SOCK_DGRAM --> UDP.
-server.bind("0.0.0.0", 5000) # server.bind(host, port) --> host = "0.0.0.0", port = 5000.
+server.bind(("0.0.0.0", 5000)) # server.bind((host, port)) --> host = "0.0.0.0", port = 5000.
 print("UDP server is on port 5000...")
 
 while True:
