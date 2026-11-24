@@ -4,6 +4,7 @@ HOST, PORT = "0.0.0.0", 5000
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # SOCK_STREAM --> TCP.
 server.bind((HOST, PORT))
 server.listen(1) # server listens one client.
+print(f"Server is listenning on port {PORT}.")
 print("Waiting for a client ...")
 
 connection, address = server.accept() # accept() returns a new socket connection and its address.
